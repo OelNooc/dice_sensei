@@ -105,14 +105,16 @@ class TestOllamaManager(unittest.TestCase):
     
     def test_response_generation(self):
         """Test para generación de respuestas"""
-        with patch('requests.post') as mock_post:
-            mock_response = Mock()
-            mock_response.json.return_value = {'response': 'Python es un lenguaje de programación'}
-            mock_response.raise_for_status.return_value = None
-            mock_post.return_value = mock_response
-            
-            result = self.ollama_manager.generate_response("Habla sobre Python")
-            self.assertIn("Python", result)
+        with patch.object(self.ollama_manager, 'is_ollama_running', return_value=True):
+            with patch('ollama_manager.requests.post') as mock_post:
+                mock_response = Mock()
+                mock_response.json.return_value = {'response': 'Python es un lenguaje de programación'}
+                mock_response.raise_for_status = Mock()
+                mock_response.status_code = 200
+                mock_post.return_value = mock_response
+                
+                result = self.ollama_manager.generate_response("Habla sobre Python")
+                self.assertIn("Python", result)
     
     @patch('requests.post')
     def test_response_generation_error(self, mock_post):
