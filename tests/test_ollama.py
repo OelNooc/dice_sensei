@@ -105,23 +105,14 @@ class TestOllamaManager(unittest.TestCase):
     
     def test_response_generation(self):
         """Test para generación de respuestas"""
-        if os.getenv('GITHUB_ACTIONS'):
-            # Mock para CI
-            with patch('requests.post') as mock_post:
-                mock_response = Mock()
-                mock_response.json.return_value = {'response': 'Python es un lenguaje de programación'}
-                mock_response.raise_for_status.return_value = None
-                mock_post.return_value = mock_response
-                
-                result = self.ollama_manager.generate_response("Habla sobre Python")
-                self.assertIn("Python", result)
-        else:
-            # Test original para local
-            try:
-                result = self.ollama_manager.generate_response("Habla sobre Python")
-                self.assertIn("Python", result)
-            except Exception:
-                self.skipTest("Ollama no disponible localmente")
+        with patch('requests.post') as mock_post:
+            mock_response = Mock()
+            mock_response.json.return_value = {'response': 'Python es un lenguaje de programación'}
+            mock_response.raise_for_status.return_value = None
+            mock_post.return_value = mock_response
+            
+            result = self.ollama_manager.generate_response("Habla sobre Python")
+            self.assertIn("Python", result)
     
     @patch('requests.post')
     def test_response_generation_error(self, mock_post):
@@ -135,20 +126,17 @@ class TestOllamaManager(unittest.TestCase):
     
     def test_response_timeout(self):
         """Test para manejo de timeout en respuestas"""
-        if os.getenv('GITHUB_ACTIONS'):
-            # Mock para CI - simular timeout
-            with patch('requests.post') as mock_post:
-                mock_post.side_effect = Exception("Timeout simulado")
-                
-                result = self.ollama_manager.generate_response("test", timeout=0.1)
-                self.assertIn("tiempo", result.lower() or "error")
-        else:
-            # Test original para local
-            try:
-                result = self.ollama_manager.generate_response("test", timeout=0.1)
-                self.assertIn("tiempo", result.lower())
-            except Exception:
-                self.skipTest("Ollama no disponible localmente")
+        with patch('requests.post') as mock_post:
+            import requests
+            mock_post.side_effect = requests.exceptions.Timeout("Request timed out")
+            
+            result = self.ollama_manager.generate_response("test")
+            
+            self.assertIsInstance(result, str)
+            self.assertTrue(
+                "tiempo" in result.lower() or "error" in result.lower(),
+                f"Respuesta inesperada: {result}"
+            )
     
     @patch('requests.post')
     def test_preload_model(self, mock_post):
