@@ -58,49 +58,48 @@ jobs:
     
     - name: Build executable
       run: |
-        python -c "
-        import subprocess
-        import sys
-        result = subprocess.run([
-            'pyinstaller',
-            '--name=DiceSensei',
-            '--onefile',
-            '--windowed',
-            '--add-data=assets;assets',
-            '--add-data=config;config',
-            '--icon=assets/icons/dicesensei.ico',
-            'main.py'
-        ], capture_output=True, text=True)
-        print('STDOUT:', result.stdout)
-        print('STDERR:', result.stderr)
-        if result.returncode != 0:
-            sys.exit(1)
-        "
+        pyinstaller --name=DiceSensei --onefile --windowed --paths=src --add-data="assets;assets" --add-data="config;config" --icon=assets/icons/dicesensei.ico src/main.py
+    
+    - name: Verify build
+      run: |
+        if (Test-Path "dist/DiceSensei.exe") {
+          Write-Host "✅ Build successful: DiceSensei.exe created"
+          Get-Item dist/DiceSensei.exe | Format-List
+        } else {
+          Write-Error "❌ Build failed: DiceSensei.exe not found"
+          exit 1
+        }
     
     - name: Create Windows package
       run: |
-        mkdir -p releases/windows
-        cp dist/DiceSensei.exe releases/windows/
-        cp -r assets releases/windows/
-        cp -r config releases/windows/
-        cp README.md releases/windows/
-        cp LICENSE releases/windows/
-        cp install_windows.ps1 releases/windows/
-        cp DiceSensei_Certificate.cer releases/windows/
+        New-Item -ItemType Directory -Force -Path releases/windows
+        Copy-Item dist/DiceSensei.exe releases/windows/
+        Copy-Item -Recurse assets releases/windows/
+        Copy-Item -Recurse config releases/windows/
+        Copy-Item README.md releases/windows/
+        Copy-Item LICENSE releases/windows/
         
-        # Create installer batch file
-        echo '@echo off' > releases/windows/install.bat
-        echo 'echo Installing DiceSensei...' >> releases/windows/install.bat
-        echo 'mkdir "%USERPROFILE%\DiceSensei"' >> releases/windows/install.bat
-        echo 'xcopy /Y /E . "%USERPROFILE%\DiceSensei\"' >> releases/windows/install.bat
-        echo 'echo Installation complete!' >> releases/windows/install.bat
-        echo 'pause' >> releases/windows/install.bat
+        # Copy installer files if they exist
+        if (Test-Path "installer/install_windows.ps1") {
+          Copy-Item installer/install_windows.ps1 releases/windows/
+        }
+        if (Test-Path "installer/DiceSensei_Certificate.cer") {
+          Copy-Item installer/DiceSensei_Certificate.cer releases/windows/
+        }
+        if (Test-Path "installer/install_windows.bat") {
+          Copy-Item installer/install_windows.bat releases/windows/
+        }
+        
+        # Create simple launcher batch file
+        @"
+        @echo off
+        echo Starting DiceSensei...
+        start "" "%~dp0DiceSensei.exe"
+        "@ | Out-File -FilePath releases/windows/launch.bat -Encoding ASCII
     
     - name: Create ZIP package
       run: |
-        cd releases/windows
-        7z a -r ../../dicesensei-windows.zip *
-        cd ../..
+        Compress-Archive -Path releases/windows/* -DestinationPath dicesensei-windows.zip -Force
     
     - name: Upload Windows artifact
       uses: actions/upload-artifact@v4
@@ -133,7 +132,17 @@ jobs:
     
     - name: Build executable
       run: |
-        pyinstaller --name=dicesensei --onefile --add-data='assets:assets' --add-data='config:config' main.py
+        pyinstaller --name=dicesensei --onefile --paths=src --add-data='assets:assets' --add-data='config:config' src/main.py
+    
+    - name: Verify build
+      run: |
+        if [ -f "dist/dicesensei" ]; then
+          echo "✅ Build successful: dicesensei created"
+          ls -lh dist/dicesensei
+        else
+          echo "❌ Build failed: dicesensei not found"
+          exit 1
+        fi
     
     - name: Create Linux package
       run: |
@@ -143,14 +152,28 @@ jobs:
         cp -r config releases/linux/
         cp README.md releases/linux/
         cp LICENSE releases/linux/
-        cp install_linux.sh releases/linux/
-        chmod +x releases/linux/install_linux.sh
+        
+        # Copy installer if exists
+        if [ -f "installer/install_linux.sh" ]; then
+          cp installer/install_linux.sh releases/linux/
+          chmod +x releases/linux/install_linux.sh
+        fi
+        
         chmod +x releases/linux/dicesensei
+        
+        # Create launch script
+        cat > releases/linux/launch.sh << 'EOF'
+        #!/bin/bash
+        DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+        cd "$DIR"
+        ./dicesensei
+        EOF
+        chmod +x releases/linux/launch.sh
     
     - name: Create ZIP package
       run: |
         cd releases/linux
-        7z a -r ../../dicesensei-linux.zip *
+        zip -r ../../dicesensei-linux.zip *
         cd ../..
     
     - name: Upload Linux artifact
@@ -182,7 +205,18 @@ jobs:
     
     - name: Build executable
       run: |
-        pyinstaller --name=DiceSensei --onefile --windowed --add-data='assets:assets' --add-data='config:config' --icon=assets/icons/dicesensei.icns main.py
+        # Build without icon first to avoid icon errors
+        pyinstaller --name=DiceSensei --onefile --windowed --paths=src --add-data='assets:assets' --add-data='config:config' src/main.py
+    
+    - name: Verify build
+      run: |
+        if [ -f "dist/DiceSensei" ]; then
+          echo "✅ Build successful: DiceSensei created"
+          ls -lh dist/DiceSensei
+        else
+          echo "❌ Build failed: DiceSensei not found"
+          exit 1
+        fi
     
     - name: Create macOS package
       run: |
@@ -192,9 +226,23 @@ jobs:
         cp -r config releases/macos/
         cp README.md releases/macos/
         cp LICENSE releases/macos/
-        cp install_macos.sh releases/macos/
-        chmod +x releases/macos/install_macos.sh
+        
+        # Copy installer if exists
+        if [ -f "installer/install_macos.sh" ]; then
+          cp installer/install_macos.sh releases/macos/
+          chmod +x releases/macos/install_macos.sh
+        fi
+        
         chmod +x releases/macos/DiceSensei
+        
+        # Create launch script
+        cat > releases/macos/launch.sh << 'EOF'
+        #!/bin/bash
+        DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+        cd "$DIR"
+        ./DiceSensei
+        EOF
+        chmod +x releases/macos/launch.sh
     
     - name: Create ZIP package
       run: |
@@ -223,44 +271,107 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         path: artifacts
-        pattern: dicesensei-*
-        merge-multiple: true
     
-    - name: List artifacts
-      run: ls -la artifacts/
+    - name: Organize artifacts
+      run: |
+        mkdir -p release_files
+        find artifacts -name "*.zip" -exec cp {} release_files/ \;
+        ls -la release_files/
     
     - name: Generate checksums
       run: |
-        cd artifacts
+        cd release_files
         sha256sum *.zip > checksums.sha256
-        echo "Generated checksums:"
+        echo "=== Generated checksums ==="
         cat checksums.sha256
+    
+    - name: Extract version from tag
+      id: get_version
+      run: |
+        VERSION=${GITHUB_REF#refs/tags/}
+        echo "version=${VERSION}" >> $GITHUB_OUTPUT
+        echo "Version: ${VERSION}"
     
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          artifacts/*.zip
-          artifacts/checksums.sha256
+          release_files/*.zip
+          release_files/checksums.sha256
         body: |
-          # DiceSensei ${{ github.ref_name }}
+          # 🎲 DiceSensei ${{ steps.get_version.outputs.version }}
           
-          ## Descarga
-          - **Windows**: [dicesensei-windows.zip](dicesensei-windows.zip)
-          - **Linux**: [dicesensei-linux.zip](dicesensei-linux.zip)  
-          - **macOS**: [dicesensei-macos.zip](dicesensei-macos.zip)
+          **Asistente de Estudio Inteligente con IA Local**
           
-          ## Verificación
-          Usa el archivo `checksums.sha256` para verificar la integridad de las descargas:
+          ## 📦 Descargas
+          
+          | Sistema | Archivo | Tamaño |
+          |---------|---------|--------|
+          | 🪟 Windows | [dicesensei-windows.zip](../../releases/download/${{ steps.get_version.outputs.version }}/dicesensei-windows.zip) | ~50 MB |
+          | 🐧 Linux | [dicesensei-linux.zip](../../releases/download/${{ steps.get_version.outputs.version }}/dicesensei-linux.zip) | ~50 MB |
+          | 🍎 macOS | [dicesensei-macos.zip](../../releases/download/${{ steps.get_version.outputs.version }}/dicesensei-macos.zip) | ~50 MB |
+          
+          ## 🔒 Verificación de Integridad
+          
+          Descarga [`checksums.sha256`](../../releases/download/${{ steps.get_version.outputs.version }}/checksums.sha256) y verifica:
+          
           ```bash
+          # Linux/macOS
           sha256sum -c checksums.sha256
+          
+          # Windows (PowerShell)
+          Get-FileHash dicesensei-windows.zip -Algorithm SHA256
           ```
           
-          ## Instalación
-          1. Extrae el ZIP en la ubicación deseada
-          2. Ejecuta el script de instalación correspondiente:
-             - Windows: Doble clic en `install.bat`
-             - Linux: `chmod +x install_linux.sh && ./install_linux.sh`
-             - macOS: `chmod +x install_macos.sh && ./install_macos.sh`
+          ## 🚀 Instalación Rápida
+          
+          ### Windows
+          1. Extrae `dicesensei-windows.zip`
+          2. **Opción A (Recomendada)**: 
+             - Instala el certificado: doble clic en `DiceSensei_Certificate.cer`
+             - Ejecuta `install_windows.ps1` (clic derecho → "Ejecutar con PowerShell")
+          3. **Opción B**: Ejecuta directamente `DiceSensei.exe`
+          
+          ### Linux
+          ```bash
+          unzip dicesensei-linux.zip
+          cd dicesensei-linux
+          chmod +x dicesensei
+          ./dicesensei
+          ```
+          
+          ### macOS
+          ```bash
+          unzip dicesensei-macos.zip
+          cd dicesensei-macos
+          chmod +x DiceSensei
+          ./DiceSensei
+          ```
+          
+          ## ⚠️ Nota para Antivirus
+          
+          Los instaladores pueden ser detectados como falsos positivos. Es seguro:
+          - ✅ Código 100% open source
+          - ✅ Sin telemetría
+          - ✅ Sin conexiones externas (excepto descargas iniciales)
+          
+          Si tu antivirus lo bloquea, añade una excepción para la carpeta de DiceSensei.
+          
+          ## 📚 Documentación
+          
+          - [README completo](../../blob/main/README.md)
+          - [Guía de instalación](../../blob/main/docs/installation.md)
+          - [Solución de problemas](../../blob/main/docs/troubleshooting.md)
+          
+          ## 🆕 Novedades en esta versión
+          
+          - Release inicial de DiceSensei
+          - Soporte para PDF, Word, TXT y Markdown
+          - Chat con IA completamente offline
+          - Optimización automática de hardware
+          
+          ---
+          
+          **¿Problemas?** Abre un [issue](../../issues) o consulta la [documentación](../../blob/main/README.md)
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
