@@ -1,0 +1,53 @@
+{
+    "available_models": [
+        {
+            "name": "mistral:7b",
+            "display_name": "Mistral 7B",
+            "description": "Modelo equilibrado - Recomendado para español",
+            "size_gb": 4.1,
+            "language": "multilingual",
+            "recommended": true,
+            "tags": ["balanced", "multilingual", "recommended"]
+        },
+        {
+            "name": "llama2:7b",
+            "display_name": "Llama 2 7B",
+            "description": "Modelo versátil optimizado para inglés",
+            "size_gb": 3.8,
+            "language": "english",
+            "recommended": false,
+            "tags": ["versatile", "english"]
+        },
+        {
+            "name": "phi:2.7b",
+            "display_name": "Phi-2 2.7B",
+            "description": "Modelo pequeño y rápido, eficiente en recursos",
+            "size_gb": 1.7,
+            "language": "english",
+            "recommended": false,
+            "tags": ["small", "fast", "efficient"]
+        },
+        {
+            "name": "codellama:7b",
+            "display_name": "Code Llama 7B",
+            "description": "Especializado en programación y código",
+            "size_gb": 3.8,
+            "language": "multilingual",
+            "recommended": false,
+            "tags": ["coding", "programming", "technical"]
+        }
+    ],
+    "selected_model": "mistral:7b",
+    "model_settings": {
+        "default_temperature": 0.7,
+        "default_max_tokens": 1000,
+        "context_window": 4096,
+        "timeout_seconds": 60
+    },
+    "download_status": {
+        "mistral:7b": false,
+        "llama2:7b": false,
+        "phi:2.7b": false,
+        "codellama:7b": false
+    }
+}

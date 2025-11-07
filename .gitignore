@@ -1,0 +1,119 @@
+# DiceSensei - Archivos ignorados por Git
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# DiceSensei specific
+logs/*.log
+!logs/.gitkeep
+backup/
+updates/
+temp_*/
+*.temp
+*.tmp
+
+# GitHub Actions workflows
+.github/workflows/generate_hashes.yml
+
+# Ollama models
+ollama_setup.exe
+assets/models/
+!assets/models/.gitkeep
+
+# Documentos de usuario
+documents/
+!documents/.gitkeep
+
+# Releases locales
+releases/
+!releases/.gitkeep
+
+# Archivos de configuración local
+config/local_*.json
+
+# Archivos de instalación temporal
+*.msi
+*.dmg
+*.deb
+*.rpm
+
+# Archivos de hash
+checksums.sha256

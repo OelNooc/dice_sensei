@@ -1,0 +1,325 @@
+2025-10-08 12:43:49,513 - DiceSensei - CRITICAL - Error fatal: 'DiceSenseiUpdater' object has no attribute 'config_dir'
+2025-10-08 12:54:17,011 - DiceSensei - ERROR - Error cr�tico: 'Toplevel' object has no attribute 'eval'
+2025-10-08 13:01:51,258 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-08 13:01:51,698 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-08 13:01:51,743 - DiceSensei - ERROR - Error cr�tico: unknown option "-margin"
+2025-10-08 13:11:30,077 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-08 13:11:30,525 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-08 13:11:30,616 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-08 13:11:30,734 - DiceSensei.OllamaManager - INFO - Configurando entorno AI...
+2025-10-08 13:11:30,735 - DiceSensei.OllamaManager - INFO - Descargando Ollama...
+2025-10-08 13:11:31,477 - DiceSensei.OllamaManager - INFO - Ollama descargado correctamente
+2025-10-08 13:11:35,503 - DiceSensei.OllamaManager - ERROR - Error iniciando Ollama: [WinError 216] Esta versi�n de %1 no es compatible con la versi�n de Windows que est� ejecutando. Compruebe la informaci�n de sistema del equipo y despu�s p�ngase en contacto con el anunciante de software
+2025-10-08 13:41:08,313 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-08 13:41:08,725 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-08 13:41:08,814 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-08 13:44:28,961 - DiceSensei.MainWindow - ERROR - Error cargando documento: 'utf-8' codec can't decode byte 0xb5 in position 11: invalid start byte
+2025-10-08 13:44:54,786 - DiceSensei.MainWindow - ERROR - Error cargando documento: 'utf-8' codec can't decode byte 0xe9 in position 15: invalid continuation byte
+2025-10-08 13:47:09,613 - DiceSensei.MainWindow - ERROR - Error cargando documento: 'utf-8' codec can't decode byte 0xb4 in position 490: invalid start byte
+2025-10-08 13:52:51,604 - DiceSensei.MainWindow - ERROR - Error cargando documento: 'utf-8' codec can't decode byte 0xb5 in position 11: invalid start byte
+2025-10-08 13:52:56,772 - DiceSensei.MainWindow - ERROR - Error cargando documento: 'utf-8' codec can't decode byte 0x91 in position 15: invalid start byte
+2025-10-10 09:06:00,895 - DiceSensei - CRITICAL - Error fatal: 'OllamaManager' object has no attribute 'get_ollama_path'
+2025-10-10 09:12:58,234 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 09:12:58,654 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 09:12:58,757 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 09:13:10,111 - DiceSensei.OllamaManager - ERROR - Error con el modelo: 'charmap' codec can't decode byte 0x8f in position 37: character maps to <undefined>
+2025-10-10 09:18:47,964 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 09:18:48,191 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 09:18:48,602 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 09:18:48,695 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 09:18:48,814 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 09:18:52,900 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 09:18:58,956 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 09:20:21,273 - DiceSensei.OllamaManager - ERROR - Error generando respuesta: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2025-10-10 09:22:36,827 - DiceSensei.OllamaManager - ERROR - Error generando respuesta: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2025-10-10 09:24:35,658 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 09:24:35,885 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 09:24:36,290 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 09:24:36,383 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 09:24:36,505 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 09:24:40,666 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 09:24:47,903 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 09:25:18,771 - DiceSensei.OllamaManager - WARNING - Timeout en primera solicitud, intentando con parametros optimizados...
+2025-10-10 09:25:56,122 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 09:25:56,351 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 09:25:56,774 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 09:25:56,869 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 09:25:56,990 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 09:26:01,163 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 09:26:08,261 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 09:27:05,487 - DiceSensei.OllamaManager - WARNING - Timeout en primera solicitud, intentando con parametros optimizados...
+2025-10-10 09:27:52,565 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta - Ollama esta respondiendo muy lento
+2025-10-10 09:31:08,276 - DiceSensei.OllamaManager - WARNING - Timeout en primera solicitud, intentando con parametros optimizados...
+2025-10-10 09:31:55,330 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta - Ollama esta respondiendo muy lento
+2025-10-10 09:46:21,689 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 09:46:21,689 - DiceSensei.OllamaManager - WARNING - psutil no encontrado, instalando automáticamente...
+2025-10-10 09:46:23,667 - DiceSensei.OllamaManager - INFO - ✅ psutil instalado correctamente
+2025-10-10 09:46:23,688 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 09:46:23,908 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 09:46:24,323 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 09:46:24,415 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 09:46:24,541 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 09:46:24,541 - DiceSensei.OllamaManager - INFO - Hardware detectado: 8 cores, 31GB RAM
+2025-10-10 09:46:28,704 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 09:46:35,808 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 09:46:46,456 - DiceSensei.OllamaManager - INFO - Generando respuesta con 6 hilos, contexto: 8192
+2025-10-10 09:47:48,515 - DiceSensei.OllamaManager - WARNING - Timeout inicial (60s), extendiendo a 90s
+2025-10-10 09:49:20,576 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta
+2025-10-10 10:42:35,800 - DiceSensei - CRITICAL - Error fatal: 'OllamaManager' object has no attribute 'get_ollama_path'
+2025-10-10 10:42:51,738 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 10:42:51,749 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 10:42:51,749 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 10:42:51,975 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 10:42:52,384 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 10:42:52,476 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 10:42:52,596 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 10:42:52,597 - DiceSensei.OllamaManager - INFO - Hardware detectado: 8 cores, 31GB RAM
+2025-10-10 10:42:56,789 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 10:43:03,961 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 10:44:00,695 - DiceSensei.OllamaManager - INFO - Generando respuesta con 6 hilos, contexto: 8192
+2025-10-10 10:45:02,774 - DiceSensei.OllamaManager - WARNING - Timeout inicial (60s), extendiendo a 90s
+2025-10-10 10:46:34,857 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta
+2025-10-10 10:47:45,730 - DiceSensei.OllamaManager - INFO - Generando respuesta con 6 hilos, contexto: 8192
+2025-10-10 10:48:32,804 - DiceSensei.OllamaManager - WARNING - Timeout inicial (45s), extendiendo a 75s
+2025-10-10 10:49:49,887 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta
+2025-10-10 10:58:39,601 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 10:58:39,611 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 10:58:39,611 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 10:58:39,839 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 10:58:40,305 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 10:58:40,396 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 10:58:40,515 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 10:58:40,515 - DiceSensei.OllamaManager - INFO - Hardware detectado: 8 cores, 31GB RAM
+2025-10-10 10:58:44,693 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 10:58:51,787 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 10:59:05,664 - DiceSensei.OllamaManager - INFO - Generando respuesta con 6 hilos, contexto: 8192
+2025-10-10 10:59:52,722 - DiceSensei.OllamaManager - WARNING - Timeout inicial (45s), extendiendo a 75s
+2025-10-10 11:00:09,699 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 11:00:09,711 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 11:00:09,711 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 11:00:09,934 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 11:00:10,323 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 11:00:10,416 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 11:00:10,532 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 11:00:10,532 - DiceSensei.OllamaManager - INFO - Hardware detectado: 8 cores, 31GB RAM
+2025-10-10 11:00:14,704 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 11:00:21,851 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 11:00:48,821 - DiceSensei.MainWindow - INFO - ✅ Archivo leído con codificación: utf-8
+2025-10-10 11:01:09,198 - DiceSensei.OllamaManager - INFO - Generando respuesta con 6 hilos, contexto: 8192
+2025-10-10 11:01:56,295 - DiceSensei.OllamaManager - WARNING - Timeout inicial (45s), extendiendo a 75s
+2025-10-10 11:03:13,364 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta
+2025-10-10 11:04:20,893 - DiceSensei.OllamaManager - INFO - Generando respuesta con 6 hilos, contexto: 8192
+2025-10-10 11:05:07,954 - DiceSensei.OllamaManager - WARNING - Timeout inicial (45s), extendiendo a 75s
+2025-10-10 11:09:14,990 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 11:09:15,002 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 11:09:15,002 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 11:09:15,231 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 11:09:15,620 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 11:09:15,715 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 11:09:15,841 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 11:09:15,841 - DiceSensei.OllamaManager - INFO - Hardware detectado: 8 cores, 31GB RAM
+2025-10-10 11:09:19,973 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 11:09:27,098 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 11:09:36,273 - DiceSensei.OllamaManager - INFO - Pre-calentando modelo...
+2025-10-10 11:09:53,330 - DiceSensei.OllamaManager - INFO - Reduciendo contexto de 8081 a 1500 caracteres
+2025-10-10 11:09:55,386 - DiceSensei.OllamaManager - INFO - 🚀 Generando respuesta RÁPIDA con 8 hilos
+2025-10-10 11:10:17,436 - DiceSensei.OllamaManager - WARNING - Timeout a los 20s - Reintentando con 30s...
+2025-10-10 11:10:49,508 - DiceSensei.OllamaManager - ERROR - Timeout después de 30s
+2025-10-10 11:13:15,122 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 11:13:15,133 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 11:13:15,133 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 11:13:15,362 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 11:13:15,769 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 11:13:15,860 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 11:13:15,989 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama + Phi 3.5...
+2025-10-10 11:13:15,989 - DiceSensei.OllamaManager - INFO - Hardware detectado: 8 cores, 31GB RAM
+2025-10-10 11:13:20,132 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 11:13:59,708 - DiceSensei.OllamaManager - INFO - ✅ Entorno AI con Phi 3.5 configurado correctamente
+2025-10-10 11:14:17,657 - DiceSensei.OllamaManager - INFO - 🔥 Pre-calentando Phi 3.5 (solo una vez)...
+2025-10-10 11:14:49,706 - DiceSensei.OllamaManager - WARNING - Pre-calentamiento falló: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-10-10 11:14:49,706 - DiceSensei.OllamaManager - INFO - Reduciendo contexto de 8081 a 1200 caracteres
+2025-10-10 11:14:51,767 - DiceSensei.OllamaManager - INFO - ⚡ Generando con Phi 3.5 usando 8 hilos
+2025-10-10 11:15:18,857 - DiceSensei.OllamaManager - WARNING - Timeout a los 25s - UN último intento con 40s...
+2025-10-10 11:16:00,955 - DiceSensei.OllamaManager - ERROR - ⏱️ Timeout CRÍTICO - El modelo sigue siendo muy lento
+2025-10-10 11:18:24,647 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 11:18:24,659 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 11:18:24,659 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 11:18:24,884 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 11:18:25,296 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 11:18:25,387 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 11:18:25,515 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama + Phi 3.5...
+2025-10-10 11:18:25,516 - DiceSensei.OllamaManager - INFO - Hardware: 8 cores, 31GB RAM
+2025-10-10 11:18:29,686 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 11:18:36,792 - DiceSensei.OllamaManager - INFO - 🔥 Cargando modelo en memoria (solo una vez)...
+2025-10-10 11:20:38,855 - DiceSensei.OllamaManager - ERROR - Timeout cargando modelo en memoria
+2025-10-10 11:20:38,855 - DiceSensei.OllamaManager - WARNING - No se pudo pre-cargar modelo, continuando...
+2025-10-10 11:20:38,855 - DiceSensei.OllamaManager - INFO - ✅ Entorno AI configurado
+2025-10-10 11:20:51,557 - DiceSensei.OllamaManager - INFO - 🔥 Cargando modelo en memoria (solo una vez)...
+2025-10-10 11:22:53,639 - DiceSensei.OllamaManager - ERROR - Timeout cargando modelo en memoria
+2025-10-10 11:42:25,298 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 11:42:25,309 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 11:42:25,309 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM - Usando mistral:7b
+2025-10-10 11:42:25,536 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 11:42:25,974 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 11:42:26,065 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 11:42:26,192 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 11:42:26,192 - DiceSensei.OllamaManager - INFO - Hardware: 8 cores, 31GB RAM
+2025-10-10 11:42:30,372 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 11:42:37,505 - DiceSensei.OllamaManager - INFO - Pre-cargando mistral:7b en memoria...
+2025-10-10 11:43:39,576 - DiceSensei.OllamaManager - WARNING - Pre-carga lenta - La primera respuesta puede demorar
+2025-10-10 11:43:39,576 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 11:43:58,012 - DiceSensei.OllamaManager - INFO - Pre-cargando mistral:7b en memoria...
+2025-10-10 11:45:00,073 - DiceSensei.OllamaManager - WARNING - Pre-carga lenta - La primera respuesta puede demorar
+2025-10-10 11:45:00,073 - DiceSensei.OllamaManager - INFO - Optimizando contexto: 8081 -> 2000 caracteres
+2025-10-10 11:45:00,074 - DiceSensei.OllamaManager - INFO - Generando respuesta con mistral:7b
+2025-10-10 11:46:02,163 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta
+2025-10-10 11:49:10,820 - DiceSensei.OllamaManager - INFO - 🖥️ Sistema: 8 cores, 31GB RAM
+2025-10-10 11:49:11,043 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 11:49:11,441 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 11:49:11,534 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 11:50:41,814 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-10 11:50:51,602 - DiceSensei.OllamaManager - INFO - ✅ Modo activado: text_only
+2025-10-10 11:55:40,194 - DiceSensei.OllamaManager - INFO - 🖥️ Sistema: 8 cores, 31GB RAM
+2025-10-10 11:55:40,421 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 11:55:40,830 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 11:55:40,923 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 12:02:31,394 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 12:02:31,405 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 12:02:31,406 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM - Usando phi3.5:latest
+2025-10-10 12:02:31,634 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 12:02:32,060 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 12:02:32,152 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 12:02:32,274 - DiceSensei.OllamaManager - INFO - Configurando entorno AI ULTRA-RÁPIDO...
+2025-10-10 12:02:32,274 - DiceSensei.OllamaManager - INFO - Hardware: 8 cores, 31GB RAM
+2025-10-10 12:02:36,453 - DiceSensei.OllamaManager - INFO - Iniciando servidor Ollama...
+2025-10-10 12:02:43,558 - DiceSensei.OllamaManager - INFO - Pre-cargando phi3.5:latest...
+2025-10-10 12:03:15,613 - DiceSensei.OllamaManager - WARNING - Pre-carga lenta - continuando...
+2025-10-10 12:03:15,614 - DiceSensei.OllamaManager - INFO - Entorno AI ULTRA-RÁPIDO configurado
+2025-10-10 12:03:48,769 - DiceSensei.OllamaManager - INFO - Pre-cargando phi3.5:latest...
+2025-10-10 12:04:20,815 - DiceSensei.OllamaManager - WARNING - Pre-carga lenta - continuando...
+2025-10-10 12:04:20,816 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 626
+2025-10-10 12:04:20,816 - DiceSensei.OllamaManager - INFO - Consulta ULTRA-RÁPIDA con phi3.5:latest
+2025-10-10 12:04:37,884 - DiceSensei.OllamaManager - ERROR - ⏱️ Timeout en modo rápido
+2025-10-10 12:07:25,106 - DiceSensei.OllamaManager - INFO - 🖥️ Sistema: 8 cores, 31GB RAM
+2025-10-10 12:07:25,107 - DiceSensei.OllamaManager - INFO - 🎯 Usando Ollama existente en puerto 11434
+2025-10-10 12:07:25,330 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 12:07:25,753 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 12:07:25,845 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 12:11:28,634 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 12:11:28,646 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 12:11:28,646 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 12:11:28,872 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 12:11:29,294 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 12:11:29,386 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 12:11:29,500 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 12:12:09,880 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 12:12:53,850 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-10 12:12:53,850 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-10 12:13:40,934 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta
+2025-10-10 12:14:29,007 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-10 12:14:29,007 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-10 12:15:16,064 - DiceSensei.OllamaManager - ERROR - Timeout generando respuesta
+2025-10-10 12:25:41,749 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 12:25:41,760 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 12:25:41,760 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 12:25:41,985 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 12:25:42,404 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 12:25:42,500 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 12:25:42,621 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 12:26:53,011 - DiceSensei.OllamaManager - WARNING - Pre-carga fallida (no crítico): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2025-10-10 12:27:55,093 - DiceSensei.OllamaManager - WARNING - Warm-up fallido: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2025-10-10 12:27:55,094 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 12:28:57,187 - DiceSensei.OllamaManager - WARNING - Warm-up fallido: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2025-10-10 12:37:38,568 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-10 12:37:38,580 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-10 12:37:38,580 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-10 12:37:38,823 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-10 12:37:39,336 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-10 12:37:39,431 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-10 12:37:39,557 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-10 12:37:41,636 - DiceSensei.OllamaManager - INFO - Ollama ya está ejecutándose
+2025-10-10 12:37:46,694 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei
+2025-10-10 12:37:46,694 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-10 12:37:49,342 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei
+2025-10-10 12:38:14,190 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-10 12:38:14,190 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-10 12:38:50,661 - DiceSensei.OllamaManager - INFO - Respuesta generada en 36.47s
+2025-10-10 12:39:22,909 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-10 12:39:22,910 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-10 12:39:53,207 - DiceSensei.OllamaManager - INFO - Respuesta generada en 30.30s
+2025-10-10 12:40:22,110 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-10 12:40:22,110 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-10 12:40:52,707 - DiceSensei.OllamaManager - INFO - Respuesta generada en 30.60s
+2025-10-18 14:44:44,085 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-18 14:44:44,116 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-18 14:44:44,116 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-18 14:44:44,379 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-18 14:44:44,834 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-18 14:44:44,937 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-18 14:44:45,059 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-18 14:47:27,215 - DiceSensei.OllamaManager - ERROR - No se pudo iniciar Ollama
+2025-10-18 14:48:31,146 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-18 14:48:31,158 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-18 14:48:31,158 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-18 14:48:31,383 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-18 14:48:31,773 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-18 14:48:31,863 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-18 14:48:31,982 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-18 14:49:28,288 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-10-18 14:49:28,301 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-10-18 14:49:28,301 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-10-18 14:49:28,561 - DiceSensei - INFO - Buscando actualizaciones...
+2025-10-18 14:49:28,951 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-10-18 14:49:29,059 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-10-18 14:49:29,177 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-10-18 14:49:31,200 - DiceSensei.OllamaManager - INFO - Ollama ya está ejecutándose
+2025-10-18 14:49:37,630 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei
+2025-10-18 14:49:37,631 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-10-18 14:49:39,879 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei
+2025-10-18 14:50:21,739 - DiceSensei.MainWindow - WARNING - PyPDF2 falló: El PDF parece estar vacío o ser una imagen
+2025-10-18 14:50:27,624 - DiceSensei.MainWindow - ERROR - pypdf también falló: El PDF no contiene texto extraíble
+2025-10-18 14:50:31,830 - DiceSensei.MainWindow - ERROR - Error cargando documento: Error procesando PDF: No se pudo extraer texto del PDF. El archivo puede estar dañado o ser una imagen.
+2025-10-18 14:50:42,668 - DiceSensei.MainWindow - WARNING - PyPDF2 falló: El PDF parece estar vacío o ser una imagen
+2025-10-18 14:50:42,727 - DiceSensei.MainWindow - ERROR - pypdf también falló: El PDF no contiene texto extraíble
+2025-10-18 14:50:43,878 - DiceSensei.MainWindow - ERROR - Error cargando documento: Error procesando PDF: No se pudo extraer texto del PDF. El archivo puede estar dañado o ser una imagen.
+2025-10-18 14:51:02,247 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-18 14:51:02,247 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-18 14:51:16,689 - DiceSensei.OllamaManager - INFO - Respuesta generada en 14.44s
+2025-10-18 14:51:41,005 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-18 14:51:41,005 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-18 14:51:43,381 - DiceSensei.OllamaManager - INFO - Respuesta generada en 2.38s
+2025-10-18 14:51:57,682 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-18 14:51:57,682 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-18 14:52:01,088 - DiceSensei.OllamaManager - INFO - Respuesta generada en 3.41s
+2025-10-18 14:52:11,139 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-18 14:52:11,139 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-18 14:52:21,114 - DiceSensei.OllamaManager - INFO - Respuesta generada en 9.97s
+2025-10-18 14:52:35,066 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-10-18 14:52:35,066 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-10-18 14:52:44,102 - DiceSensei.OllamaManager - INFO - Respuesta generada en 9.04s
+2025-11-07 11:01:13,092 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-11-07 11:01:13,114 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-11-07 11:01:13,114 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-11-07 11:01:13,363 - DiceSensei - INFO - Buscando actualizaciones...
+2025-11-07 11:01:13,791 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-11-07 11:01:13,887 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-11-07 11:01:14,009 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-11-07 11:01:28,410 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei
+2025-11-07 11:01:28,410 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-11-07 11:01:30,615 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei
+2025-11-07 11:02:02,399 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-11-07 11:02:02,399 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-11-07 11:02:23,519 - DiceSensei.OllamaManager - INFO - Respuesta generada en 21.12s - 378 palabras
+2025-11-07 11:02:35,475 - DiceSensei.OllamaManager - INFO - Contexto comprimido: 8081 -> 2030 caracteres
+2025-11-07 11:02:35,475 - DiceSensei.OllamaManager - INFO - Generando respuesta con phi3.5:latest
+2025-11-07 11:02:52,456 - DiceSensei.OllamaManager - INFO - Respuesta generada en 16.98s - 400 palabras
+2025-11-07 11:09:56,739 - DiceSensei.OllamaManager - INFO - Ollama encontrado en: C:\Users\UsuarioCompuElite\AppData\Local\Programs\Ollama\ollama.exe
+2025-11-07 11:09:56,750 - DiceSensei.OllamaManager - INFO - ✅ psutil ya está instalado
+2025-11-07 11:09:56,750 - DiceSensei.OllamaManager - INFO - Sistema detectado: 8 cores, 31GB RAM
+2025-11-07 11:09:56,976 - DiceSensei - INFO - Buscando actualizaciones...
+2025-11-07 11:09:57,403 - DiceSensei.Updater - ERROR - Error obteniendo release: 404 Client Error: Not Found for url: https://api.github.com/repos/OelNooc/dice_sensei/releases/latest
+2025-11-07 11:09:57,496 - DiceSensei - INFO - DiceSensei iniciado correctamente
+2025-11-07 11:09:57,617 - DiceSensei.OllamaManager - INFO - Configurando entorno AI con Ollama...
+2025-11-07 11:10:09,548 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei
+2025-11-07 11:10:09,549 - DiceSensei.OllamaManager - INFO - Entorno AI configurado correctamente
+2025-11-07 11:10:11,756 - DiceSensei.OllamaManager - INFO - Warm-up exitoso: Hola, soy DiceSensei

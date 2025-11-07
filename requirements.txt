@@ -1,0 +1,19 @@
+# DiceSensei - Dependencias principales
+requests>=2.28.0
+Pillow>=9.0.0
+
+# Procesamiento de documentos
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+markdown>=3.4.0
+
+# Detección de hardware
+psutil>=5.9.0
+
+# Desarrollo
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
+
+# Empaquetado
+pyinstaller>=5.0.0

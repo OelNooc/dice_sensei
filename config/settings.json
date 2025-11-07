@@ -1,0 +1,20 @@
+{
+    "ai": {
+        "model": "mistral:7b",
+        "temperature": 0.7,
+        "max_tokens": 1000
+    },
+    "ui": {
+        "theme": "dark",
+        "font_size": 11,
+        "language": "es"
+    },
+    "updates": {
+        "auto_check": true,
+        "allow_auto_update": true
+    },
+    "document": {
+        "max_file_size_mb": 50,
+        "supported_formats": [".txt", ".pdf", ".docx", ".md"]
+    }
+}

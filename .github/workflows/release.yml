@@ -1,0 +1,266 @@
+name: Build and Release DiceSensei
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install pytest requests psutil
+    
+    - name: Run tests
+      run: |
+        if [ -d "tests" ]; then
+          python -m pytest tests/ -v --tb=short
+        else
+          echo "No tests directory found, skipping tests"
+        fi
+
+  build-windows:
+    name: Build Windows
+    needs: test
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+    
+    - name: Build executable
+      run: |
+        python -c "
+        import subprocess
+        import sys
+        result = subprocess.run([
+            'pyinstaller',
+            '--name=DiceSensei',
+            '--onefile',
+            '--windowed',
+            '--add-data=assets;assets',
+            '--add-data=config;config',
+            '--icon=assets/icons/dicesensei.ico',
+            'main.py'
+        ], capture_output=True, text=True)
+        print('STDOUT:', result.stdout)
+        print('STDERR:', result.stderr)
+        if result.returncode != 0:
+            sys.exit(1)
+        "
+    
+    - name: Create Windows package
+      run: |
+        mkdir -p releases/windows
+        cp dist/DiceSensei.exe releases/windows/
+        cp -r assets releases/windows/
+        cp -r config releases/windows/
+        cp README.md releases/windows/
+        cp LICENSE releases/windows/
+        cp install_windows.ps1 releases/windows/
+        cp DiceSensei_Certificate.cer releases/windows/
+        
+        # Create installer batch file
+        echo '@echo off' > releases/windows/install.bat
+        echo 'echo Installing DiceSensei...' >> releases/windows/install.bat
+        echo 'mkdir "%USERPROFILE%\DiceSensei"' >> releases/windows/install.bat
+        echo 'xcopy /Y /E . "%USERPROFILE%\DiceSensei\"' >> releases/windows/install.bat
+        echo 'echo Installation complete!' >> releases/windows/install.bat
+        echo 'pause' >> releases/windows/install.bat
+    
+    - name: Create ZIP package
+      run: |
+        cd releases/windows
+        7z a -r ../../dicesensei-windows.zip *
+        cd ../..
+    
+    - name: Upload Windows artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dicesensei-windows
+        path: dicesensei-windows.zip
+        retention-days: 1
+
+  build-linux:
+    name: Build Linux
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+        sudo apt-get update
+        sudo apt-get install -y p7zip-full
+    
+    - name: Build executable
+      run: |
+        pyinstaller --name=dicesensei --onefile --add-data='assets:assets' --add-data='config:config' main.py
+    
+    - name: Create Linux package
+      run: |
+        mkdir -p releases/linux
+        cp dist/dicesensei releases/linux/
+        cp -r assets releases/linux/
+        cp -r config releases/linux/
+        cp README.md releases/linux/
+        cp LICENSE releases/linux/
+        cp install_linux.sh releases/linux/
+        chmod +x releases/linux/install_linux.sh
+        chmod +x releases/linux/dicesensei
+    
+    - name: Create ZIP package
+      run: |
+        cd releases/linux
+        7z a -r ../../dicesensei-linux.zip *
+        cd ../..
+    
+    - name: Upload Linux artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dicesensei-linux
+        path: dicesensei-linux.zip
+        retention-days: 1
+
+  build-macos:
+    name: Build macOS
+    needs: test
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+    
+    - name: Build executable
+      run: |
+        pyinstaller --name=DiceSensei --onefile --windowed --add-data='assets:assets' --add-data='config:config' --icon=assets/icons/dicesensei.icns main.py
+    
+    - name: Create macOS package
+      run: |
+        mkdir -p releases/macos
+        cp dist/DiceSensei releases/macos/
+        cp -r assets releases/macos/
+        cp -r config releases/macos/
+        cp README.md releases/macos/
+        cp LICENSE releases/macos/
+        cp install_macos.sh releases/macos/
+        chmod +x releases/macos/install_macos.sh
+        chmod +x releases/macos/DiceSensei
+    
+    - name: Create ZIP package
+      run: |
+        cd releases/macos
+        zip -r ../../dicesensei-macos.zip *
+        cd ../..
+    
+    - name: Upload macOS artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dicesensei-macos
+        path: dicesensei-macos.zip
+        retention-days: 1
+
+  release:
+    name: Create Release
+    needs: [build-windows, build-linux, build-macos]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+        pattern: dicesensei-*
+        merge-multiple: true
+    
+    - name: List artifacts
+      run: ls -la artifacts/
+    
+    - name: Generate checksums
+      run: |
+        cd artifacts
+        sha256sum *.zip > checksums.sha256
+        echo "Generated checksums:"
+        cat checksums.sha256
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          artifacts/*.zip
+          artifacts/checksums.sha256
+        body: |
+          # DiceSensei ${{ github.ref_name }}
+          
+          ## Descarga
+          - **Windows**: [dicesensei-windows.zip](dicesensei-windows.zip)
+          - **Linux**: [dicesensei-linux.zip](dicesensei-linux.zip)  
+          - **macOS**: [dicesensei-macos.zip](dicesensei-macos.zip)
+          
+          ## Verificación
+          Usa el archivo `checksums.sha256` para verificar la integridad de las descargas:
+          ```bash
+          sha256sum -c checksums.sha256
+          ```
+          
+          ## Instalación
+          1. Extrae el ZIP en la ubicación deseada
+          2. Ejecuta el script de instalación correspondiente:
+             - Windows: Doble clic en `install.bat`
+             - Linux: `chmod +x install_linux.sh && ./install_linux.sh`
+             - macOS: `chmod +x install_macos.sh && ./install_macos.sh`
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
